@@ -2,7 +2,6 @@ package com.zsj.lib.androidlib.application;
 
 import android.app.Application;
 
-import com.vondear.rxtools.RxTool;
 
 /**
  * 创建者     朱胜军
@@ -17,7 +16,5 @@ public class BaseApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        //初始化RxTool
-        RxTool.init(this);
     }
 }
