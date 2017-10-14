@@ -7,4 +7,6 @@
 添加了RxTool的类库,详情见https://github.com/vondear/RxTools
 #### 1.0.4
 加入CircleImageView库,详情见:https://github.com/hdodenhof/CircleImageView
+#### 1.05
+把图片转成字符串存到sp中,取反.
 

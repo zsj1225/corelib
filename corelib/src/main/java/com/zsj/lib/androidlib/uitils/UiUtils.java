@@ -42,7 +42,7 @@ public class UiUtils {
     }
 
     //保存图片到sp中
-    public static void putImageToShare(Context mContext, ImageView imageView) {
+    public static void putImageToSp(Context mContext, ImageView imageView) {
         BitmapDrawable drawable = (BitmapDrawable) imageView.getDrawable();
         Bitmap bitmap = drawable.getBitmap();
         //第一步：将Bitmap压缩成字节数组输出流
@@ -56,7 +56,7 @@ public class UiUtils {
     }
 
     //读取图片
-    public static void getImageToShare(Context mContext, ImageView imageView) {
+    public static void getImageToSp(Context mContext, ImageView imageView) {
         //1.拿到string
         String imgString = RxSPTool.getString(mContext, "image_title");
         if (!imgString.equals("")) {
