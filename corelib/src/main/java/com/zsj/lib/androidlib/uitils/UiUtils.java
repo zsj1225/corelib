@@ -9,7 +9,7 @@ import android.util.Base64;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.vondear.rxtools.RxSPTool;
+import com.blankj.utilcode.util.SPUtils;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -52,13 +52,13 @@ public class UiUtils {
         byte[] byteArray = byStream.toByteArray();
         String imgString = new String(Base64.encodeToString(byteArray, Base64.DEFAULT));
         //第三步：将String保存shareUtils
-        RxSPTool.putString(mContext, "image_title", imgString);
+        SPUtils.getInstance().put("image_title", imgString);
     }
 
     //读取图片
     public static void getImageToSp(Context mContext, ImageView imageView) {
         //1.拿到string
-        String imgString = RxSPTool.getString(mContext, "image_title");
+        String imgString = SPUtils.getInstance().getString("image_title", "");
         if (!imgString.equals("")) {
             //2.利用Base64将我们string转换
             byte[] byteArray = Base64.decode(imgString, Base64.DEFAULT);

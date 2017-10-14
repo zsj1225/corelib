@@ -4,8 +4,6 @@ import android.app.Application;
 import android.content.Context;
 import android.os.Handler;
 
-import com.vondear.rxtools.RxTool;
-
 
 /**
  * Created by shkstart on 2016/12/2 0002.

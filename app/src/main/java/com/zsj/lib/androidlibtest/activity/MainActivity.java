@@ -1,6 +1,5 @@
 package com.zsj.lib.androidlibtest.activity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
@@ -22,7 +21,6 @@ public class MainActivity extends AppBaseActivity {
     private Button mBtnLogin;
     private ListView mListView;
     private Button mBtn_convert;
-    private Button mBtn_circle_imageview;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -49,7 +47,6 @@ public class MainActivity extends AppBaseActivity {
         // 登录事件
         mBtnLogin = (Button) findViewById(R.id.sign_in_button);
         mBtn_convert = (Button) findViewById(R.id.btn_convert);
-        mBtn_circle_imageview = (Button) findViewById(R.id.btn_circle_imageview);
         mListView = (ListView) findViewById(R.id.listview);
 
         mBtnLogin.setOnClickListener(
@@ -66,17 +63,8 @@ public class MainActivity extends AppBaseActivity {
             }
         });
 
-        mBtn_circle_imageview.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                toCircleImageview();
-            }
-        });
     }
 
-    private void toCircleImageview() {
-        startActivity(new Intent(this,CircleImageviewActivity.class));
-    }
 
     private void convert2Int() {
         int anInt = ConvertUtils.convertToInt("123s", 0);

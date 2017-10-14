@@ -2,6 +2,8 @@ package com.zsj.lib.androidlib.application;
 
 import android.app.Application;
 
+import com.blankj.utilcode.util.Utils;
+
 
 /**
  * 创建者     朱胜军
@@ -16,5 +18,6 @@ public class BaseApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        Utils.init(this);
     }
 }
