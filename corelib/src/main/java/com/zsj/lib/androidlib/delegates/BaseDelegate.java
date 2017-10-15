@@ -3,20 +3,19 @@ package com.zsj.lib.androidlib.delegates;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
-import me.yokeyword.fragmentation.ISupportFragment;
+import me.yokeyword.fragmentation_swipeback.SwipeBackFragment;
 
 /**
  * Created by 傅令杰 on 2017/4/2
  */
 
-public abstract class BaseDelegate extends Fragment implements ISupportFragment {
+public abstract class BaseDelegate extends SwipeBackFragment {
 
     private Unbinder mUnbinder = null;
 
