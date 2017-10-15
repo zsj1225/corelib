@@ -1,1 +1,1 @@
-include ':app', ':corelib', ':zsj-annotations'
+include ':app', ':corelib'
