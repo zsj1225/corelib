@@ -1,4 +1,4 @@
-package com.zsj.lib.androidlib.activity;
+package com.zsj.lib.androidlib.activities;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
