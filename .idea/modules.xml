@@ -5,7 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/AndroidLib.iml" filepath="$PROJECT_DIR$/AndroidLib.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/corelib/corelib.iml" filepath="$PROJECT_DIR$/corelib/corelib.iml" />
-      <module fileurl="file://$PROJECT_DIR$/zsj-annotations/zsj-annotations.iml" filepath="$PROJECT_DIR$/zsj-annotations/zsj-annotations.iml" />
     </modules>
   </component>
 </project>

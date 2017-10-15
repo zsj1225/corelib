@@ -1,8 +1,9 @@
-package com.zsj.lib.androidlib.application;
+package com.zsj.lib.androidlib.app;
 
 import android.app.Application;
 
 import com.blankj.utilcode.util.Utils;
+import com.zsj.lib.androidlib.app.app.Latte;
 
 
 /**
