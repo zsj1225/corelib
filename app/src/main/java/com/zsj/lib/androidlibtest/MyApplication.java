@@ -4,6 +4,8 @@ import android.app.Application;
 import android.content.Context;
 import android.os.Handler;
 
+import com.zsj.lib.androidlib.app.app.Latte;
+
 
 /**
  * Created by shkstart on 2016/12/2 0002.
@@ -28,5 +30,9 @@ public class MyApplication extends Application {
         //设置未捕获异常的处理器
 //        CrashHandler.getInstance().init();
         //初始化ShareSDK
+
+        Latte.init(this)
+                .withApiHost("http://127.0.0.1/")
+                .configure();
     }
 }

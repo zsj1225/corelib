@@ -8,6 +8,10 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.zsj.lib.androidlib.net.RestClient;
+import com.zsj.lib.androidlib.net.callback.IError;
+import com.zsj.lib.androidlib.net.callback.IFailure;
+import com.zsj.lib.androidlib.net.callback.ISuccess;
 import com.zsj.lib.androidlib.uitils.ConvertUtils;
 import com.zsj.lib.androidlibtest.R;
 import com.zsj.lib.androidlibtest.adapter.ProductAdapter;
@@ -26,6 +30,28 @@ public class MainActivity extends AppBaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        RestClient.builder()
+                .url("http://news.baidu.com/")
+                .success(new ISuccess() {
+                    @Override
+                    public void onSuccess(String response) {
+                        Toast.makeText(getApplicationContext(), response, Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .error(new IError() {
+                    @Override
+                    public void onError(int code, String msg) {
+                        Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .failure(new IFailure() {
+                    @Override
+                    public void onFailure() {
+                        Toast.makeText(getApplicationContext(), "失败", Toast.LENGTH_SHORT).show();
+                    }
+                }).build()
+                .get();
     }
 
     @Override
